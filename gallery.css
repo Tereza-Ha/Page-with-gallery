@@ -1,0 +1,58 @@
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  padding: 20px 0 20px 0;
+}
+
+.img1 {
+  background-image: url(img/gallery4.webp);
+}
+
+.img2 {
+  background-image: url(img/gallery2.jpg);
+}
+
+.img3 {
+  background-image: url(img/gallery1.jpg);
+}
+
+.img4 {
+  background-image: url(img/gallery3.jpg);
+}
+
+.img5 {
+  background-image: url(img/gallery5.jpg);
+}
+
+.slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  border-radius: 50px;
+  margin: 10px;
+  cursor: pointer;
+  flex: 0.5;
+  transition: flex 0.7s ease-in-out;
+}
+
+.slide.active {
+  flex: 6;
+}
+
+@media (max-width: 700px) {
+  .gallery {
+    height: calc(100vh - 85px);
+  }
+
+  .slide:nth-of-type(4),
+  .slide:nth-of-type(5) {
+    display: none;
+  }
+}
